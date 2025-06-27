@@ -80,6 +80,56 @@ async function PaymentResult({ searchParams }: PaymentReturnProps) {
             </div>
           </div>
 
+          {/* Demo Notice */}
+          <div className="px-6 py-3 bg-blue-50 border-b border-blue-200">
+            <div className="flex items-start gap-2">
+              <div className="w-4 h-4 mt-0.5 flex-shrink-0">
+                <svg
+                  className="w-4 h-4 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs text-blue-800 leading-relaxed">
+                  <strong>Mục đích Demo:</strong> Trang này hiển thị kết quả
+                  thanh toán chỉ để demo giao diện. Trong thực tế, bạn phải chờ
+                  và lắng nghe IPN (Instant Payment Notification) để xác minh
+                  giao dịch đã được xử lý thành công hay chưa và cập nhật hệ
+                  thống của bạn.
+                </p>
+                <div className="mt-2 space-y-1">
+                  <div>
+                    <a
+                      href="https://vnpay.js.org/ipn/verify-ipn-call"
+                      target="_blank"
+                      rel="noopener"
+                      className="text-blue-600 hover:text-blue-800 underline font-medium text-xs"
+                    >
+                      📚 Hướng dẫn VNPay.js IPN →
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://sandbox.vnpayment.vn/apis/docs/thanh-toan-pay/pay.html#code-ipn-url"
+                      target="_blank"
+                      rel="noopener"
+                      className="text-blue-600 hover:text-blue-800 underline font-medium text-xs"
+                    >
+                      📖 Tài liệu chính thức VNPay IPN →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Content */}
           <div className="px-6 py-4 space-y-4">
             {/* Transaction Details */}
@@ -99,8 +149,7 @@ async function PaymentResult({ searchParams }: PaymentReturnProps) {
                     Số tiền:
                   </span>
                   <span className="text-sm text-gray-900 font-semibold">
-                    {(Number(verify.vnp_Amount) / 100).toLocaleString("vi-VN")}{" "}
-                    VNĐ
+                    {Number(verify.vnp_Amount).toLocaleString("vi-VN")} VNĐ
                   </span>
                 </div>
               )}
