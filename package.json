@@ -1,27 +1,91 @@
 {
   "name": "vnpay-nextjs-fullstack-example",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Demo tích hợp cổng thanh toán VNPay với Next.js 15. Bao gồm Server Actions, xử lý IPN, hai tùy chọn thanh toán và giao diện responsive hiện đại. Hoàn hảo cho ứng dụng thương mại điện tử Việt Nam.",
+  "keywords": [
+    "vnpay",
+    "vnpayjs",
+    "vnpay.vn",
+    "payment",
+    "vn-payment",
+    "vn-payments",
+    "nextjs",
+    "cổng thanh toán",
+    "thanh toán việt nam",
+    "thương mại điện tử",
+    "server-actions",
+    "ipn-handler",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "fullstack",
+    "demo",
+    "tích hợp",
+    "thanh toán online",
+    "ngân hàng việt nam",
+    "fintech",
+    "xử lý thanh toán",
+    "sandbox",
+    "nextjs-15"
+  ],
+  "author": "lehuygiang28 <lehuygiang28@gmail.com>",
+  "maintainers": [
+    "lehuygiang28"
+  ],
+  "license": "MIT",
+  "homepage": "https://vnpay-nextjs-fullstack-example.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lehuygiang28/vnpay-nextjs-fullstack-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lehuygiang28/vnpay-nextjs-fullstack-example/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "preview": "next build && next start",
+    "clean": "rm -rf .next out node_modules/.cache"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "clsx": "^2.1.1",
+    "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.4"
+    "tailwind-merge": "^3.3.1",
+    "vnpay": "^2.3.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
