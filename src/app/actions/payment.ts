@@ -109,9 +109,23 @@ export async function createPaymentUrl(formData: FormData) {
     console.log(`Generated payment URL for order ${orderId}:`, paymentUrl);
 
     // Redirect to VNPay
+    // Note: redirect() in Server Actions throws a NEXT_REDIRECT error which is expected behavior
     redirect(paymentUrl);
   } catch (error) {
-    console.error("Error creating payment URL:", error);
+    // Check if this is a Next.js redirect (expected behavior)
+    const isRedirect =
+      error instanceof Error &&
+      (error.message.includes("NEXT_REDIRECT") ||
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (error as any).digest?.includes("NEXT_REDIRECT"));
+
+    if (isRedirect) {
+      // This is expected behavior for redirect() in Server Actions
+      console.log("Redirecting to VNPay payment gateway...");
+    } else {
+      // Only log actual errors
+      console.error("Error creating payment URL:", error);
+    }
     throw error;
   }
 }

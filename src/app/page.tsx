@@ -55,7 +55,20 @@ export default function HomePage() {
     try {
       await createPaymentUrl(formData);
     } catch (error) {
-      console.error("Payment redirect failed:", error);
+      // Check if this is a Next.js redirect (expected behavior)
+      const isRedirect =
+        error instanceof Error &&
+        (error.message.includes("NEXT_REDIRECT") ||
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (error as any).digest?.includes("NEXT_REDIRECT"));
+
+      if (isRedirect) {
+        // This is expected behavior for redirect() in Server Actions
+        console.log("Redirecting to VNPay payment gateway...");
+      } else {
+        // Only log actual errors
+        console.error("Payment redirect failed:", error);
+      }
     } finally {
       setLoading(false);
     }

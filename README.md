@@ -220,6 +220,24 @@ import { Bank, QueryDr } from "vnpay";
 
 **Why?** The VNPay package contains Node.js-specific code that cannot run in the browser. Type-only imports ensure you get TypeScript type checking without including the runtime code in your client bundle.
 
+### Next.js Redirect Behavior
+
+⚠️ **Note**: When using the "Chuyển đến VNPay" button, you may see a `NEXT_REDIRECT` error in the console. This is **expected behavior** - it's how Next.js handles `redirect()` in Server Actions, not an actual error.
+
+```typescript
+// This is normal behavior in Server Actions
+try {
+  await createPaymentUrl(formData);
+} catch (error) {
+  // NEXT_REDIRECT errors are expected when redirect() is called
+  if (error.digest?.includes("NEXT_REDIRECT")) {
+    // This means the redirect is working correctly
+    return;
+  }
+  // Handle actual errors here
+}
+```
+
 ## 🔐 Security Features
 
 - ✅ **Server-side only** VNPay processing
