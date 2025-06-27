@@ -1,0 +1,51 @@
+# robots.txt for VNPay Next.js Demo - Tích hợp Cổng Thanh toán
+# Created by: lehuygiang28 <lehuygiang28@gmail.com>
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vnpay-nextjs-demo.vercel.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block access to API routes (they're for webhooks only)
+User-agent: *
+Disallow: /api/
+
+# Allow access to important resources
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+Allow: /*.json$
+
+# Special handling for Vietnamese content
+# Vietnamese language pages are prioritized
+# Contact: lehuygiang28@gmail.com
+# Website: https://vnpay-nextjs-demo.vercel.app 
