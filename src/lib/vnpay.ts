@@ -8,7 +8,6 @@ const vnpayConfig = {
   testMode: process.env.VNPAY_TEST_MODE === "true" || true,
   returnUrl:
     process.env.VNPAY_RETURN_URL || "http://localhost:3000/payment/return",
-  ipnUrl: process.env.VNPAY_IPN_URL || "http://localhost:3000/api/payment/ipn",
 };
 
 // Initialize VNPay instance
