@@ -28,7 +28,7 @@ A comprehensive example of integrating VNPay payment gateway with Next.js 15, fe
 - [Next.js 15](https://nextjs.org/) - React framework with App Router
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [VNPay Package](https://www.npmjs.com/package/vnpay) v2.3.2 - VNPay integration
+- [VNPay Package](https://www.npmjs.com/package/vnpay) v2.4.0 - VNPay integration
 - [Heroicons](https://heroicons.com/) - Beautiful SVG icons
 - [clsx](https://github.com/lukeed/clsx) - Conditional class names
 - [tailwind-merge](https://github.com/dcastil/tailwind-merge) - Merge Tailwind classes

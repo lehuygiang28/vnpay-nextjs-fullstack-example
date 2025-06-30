@@ -96,7 +96,7 @@ export function InfoPanels() {
             <span className="w-1 h-1 bg-gray-600 rounded-full flex-shrink-0 mt-2"></span>
             <div className="flex-1 min-w-0">
               <span className="font-medium text-gray-900">Phiên bản:</span>
-              <span className="ml-1 break-words">VNPay 2.3.2 + Next.js 15</span>
+              <span className="ml-1 break-words">VNPay 2.4.0 + Next.js 15</span>
             </div>
           </div>
 
