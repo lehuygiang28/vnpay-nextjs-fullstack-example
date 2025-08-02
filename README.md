@@ -4,6 +4,12 @@ A comprehensive example of integrating VNPay payment gateway with Next.js 15, fe
 
 ⚠️ **Important**: This implementation correctly handles VNPay on the **server-side only**. The VNPay package cannot be used on the client-side, so all VNPay operations are handled through Next.js server actions and API routes.
 
+---
+
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=lehuygiang28/vnpay-nextjs-fullstack-example@github)](https://gitads.dev/v1/ad-track?source=lehuygiang28/vnpay-nextjs-fullstack-example@github)
+
+---
+
 ## 🚀 Features
 
 - **Next.js 15** with App Router and Server Actions
