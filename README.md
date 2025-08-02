@@ -322,3 +322,5 @@ Made with ❤️ for the Vietnamese developer community
 - [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
 - [Heroicons](https://heroicons.com/) for the beautiful icon set
 - [Vercel](https://vercel.com/) for Next.js hosting and deployment **platform**
+
+<!-- GitAds-Verify: TXH7YNMGEMAMWK8WUSKGWAYUPGN42QVN -->
